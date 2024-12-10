@@ -33,7 +33,6 @@ public class ApprovalController {
   @PostMapping
   public ResponseEntity<?> post(@RequestBody ApprovalRequest param) {
     try {
-
       approvalService.approval(param);
       return ResponseEntity.ok(new ErrorResponse(HttpStatus.OK, "ok"));
 

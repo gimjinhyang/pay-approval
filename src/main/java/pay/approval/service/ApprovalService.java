@@ -26,7 +26,7 @@ public class ApprovalService {
   public void approval(ApprovalRequest param) {
 
     // 토큰 유효성 확인
-    //    requestToken(param);
+    requestToken(param);
 
 
     // 결제 승인 처리
