@@ -1,0 +1,19 @@
+# SPRING APPLICATION
+spring:
+  application:
+    name: Pay Approval API
+  config:
+    name: application
+  profiles:
+    include:
+      - token
+
+# EMBEDDED SERVER
+server:
+  port: 1003
+  tomcat:
+    max-threads: 0
+    uri-encoding: UTF-8
+  servlet:
+    encoding:
+      force: true
