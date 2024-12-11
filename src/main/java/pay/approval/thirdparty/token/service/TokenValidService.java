@@ -20,7 +20,7 @@ import pay.approval.thirdparty.token.response.TokenVerifyResponse;
 @Slf4j
 @RequiredArgsConstructor
 @Component
-public class TokenVerifyService {
+public class TokenValidService {
 
   private final TokenProperties tokenProperties;
 
@@ -54,7 +54,7 @@ public class TokenVerifyService {
    * @return
    */
   private String makeUri() {
-    return StringUtils.join(tokenProperties.getUrl(), tokenProperties.getApiTokenVerify());
+    return StringUtils.join(tokenProperties.getUrl(), tokenProperties.getApiTokenValid());
   }
 
   /**

@@ -34,7 +34,7 @@ public class ApprovalController {
   public ResponseEntity<?> post(@RequestBody ApprovalRequest param) {
     try {
       approvalService.approval(param);
-      return ResponseEntity.ok(new ErrorResponse(HttpStatus.OK, "ok"));
+      return ResponseEntity.ok(new ErrorResponse(HttpStatus.OK, "success"));
 
     } catch (IllegalStateException e) {
       log.warn("caught a " + e.getClass() + " with message: " + e.getMessage(), e);

@@ -1,3 +1,3 @@
 token:
   url: http://localhost:1002
-  api-token-verify: /api/token/verify
+  api-token-valid: /api/token/valid

@@ -25,6 +25,6 @@ public class TokenProperties {
   /**
    * 토큰 유효성 확인 API
    */
-  private String apiTokenVerify;
+  private String apiTokenValid;
 
 }

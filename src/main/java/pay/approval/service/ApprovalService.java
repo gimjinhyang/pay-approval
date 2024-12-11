@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
 import pay.approval.request.ApprovalRequest;
 import pay.approval.thirdparty.token.request.TokenVerifyRequest;
-import pay.approval.thirdparty.token.service.TokenVerifyService;
+import pay.approval.thirdparty.token.service.TokenValidService;
 
 /**
  * 결제 승인 서비스
@@ -16,7 +16,7 @@ import pay.approval.thirdparty.token.service.TokenVerifyService;
 @Component
 public class ApprovalService {
 
-  private final TokenVerifyService tokenVerifyService;
+  private final TokenValidService tokenValidService;
 
   /**
    * 결제 승인 처리
@@ -42,7 +42,7 @@ public class ApprovalService {
    */
   private void requestToken(ApprovalRequest param) {
     final TokenVerifyRequest token = new TokenVerifyRequest(param.getToken());
-    tokenVerifyService.verify(token);
+    tokenValidService.verify(token);
   }
 
 }
